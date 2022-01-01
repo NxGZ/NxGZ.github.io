@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>任务b</title>
+	</head>
+	<body>
+		<h1>按 ↑,↓,←,→ 移动图片</h1>
+		<img src="../images/p201923211401007.png" id="id" width="280" height="394" style="position: absolute; left: 50px;top: 80px;" />
+		<script type="text/javascript">
+		document.onkeydown = function(e){
+			var obj = document.getElementById("id");
+			var x = obj.offsetLeft;
+			var y = obj.offsetTop;
+			switch ((e||event).keyCode) {
+				case 37: x--; break;
+				case 39: x++; break;
+				case 38: y--; break;
+				case 40: y++; break;
+			}
+			obj.style.left = x+"px";
+			obj.style.top = y+"px";
+		};
+		</script>
+	</body>
+</html>
